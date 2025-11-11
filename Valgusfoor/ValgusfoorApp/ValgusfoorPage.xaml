@@ -1,0 +1,57 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ValgusfoorApp.ValgusfoorPage"
+             Title="Valgusfoor">
+
+    <VerticalStackLayout Padding="30" Spacing="20" BackgroundColor="LightGray">
+
+        <!-- Pealkiri -->
+        <Label x:Name="statusLabel"
+               Text="Vali valgus"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <!-- Punane tuli -->
+        <BoxView x:Name="redLight"
+                 BackgroundColor="Gray"
+                 HeightRequest="100"
+                 WidthRequest="100"
+                 CornerRadius="50"
+                 HorizontalOptions="Center" />
+
+        <!-- Kollane tuli -->
+        <BoxView x:Name="yellowLight"
+                 BackgroundColor="Gray"
+                 HeightRequest="100"
+                 WidthRequest="100"
+                 CornerRadius="50"
+                 HorizontalOptions="Center" />
+
+        <!-- Roheline tuli -->
+        <BoxView x:Name="greenLight"
+                 BackgroundColor="Gray"
+                 HeightRequest="100"
+                 WidthRequest="100"
+                 CornerRadius="50"
+                 HorizontalOptions="Center" />
+
+        <!-- Taimer -->
+        <Label x:Name="timerLabel"
+               Text=""
+               FontSize="20"
+               HorizontalOptions="Center"
+               TextColor="Black" />
+
+        <!-- Nupud -->
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="Sisse" Clicked="OnTurnOnClicked" />
+            <Button Text="Välja" Clicked="OnTurnOffClicked" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="Päevarežiim" Clicked="OnDayModeClicked" />
+            <Button Text="Öörežiim" Clicked="OnNightModeClicked" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
